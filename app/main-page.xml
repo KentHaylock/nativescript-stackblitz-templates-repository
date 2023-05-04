@@ -1,0 +1,19 @@
+<Page loaded="onLoaded" navigatingTo="onNavigatingTo" class="page">
+  <ActionBar title="Students" class="action-bar" />
+
+  <GridLayout rows="*" columns="auto,*,auto" class="table">
+    <Label text="Name" class="table-header" row="0" col="0" />
+    <Label text="Assessment Type" class="table-header" row="0" col="1" />
+    <Label text="Date" class="table-header" row="0" col="2" />
+    <ListView items="{{ students }}" class="list-group" row="1" colSpan="3">
+      <ListView.itemTemplate>
+        <GridLayout rows="*" columns="auto,*,auto" class="table-row">
+          <Label text="{{ name }}" class="table-cell" row="0" col="0" />
+          <Picker items="{{ assessmentTypes }}" selectedIndex="{{ assessmentType }}" class="table-cell" row="0" col="1" />
+          <DatePicker date="{{ date }}" class="table-cell" row="0" col="2" />
+        </GridLayout>
+      </ListView.itemTemplate>
+    </ListView>
+    <Button text="Add Student" tap="{{ addStudent }}" row="2" colSpan="3" class="add-button" />
+  </GridLayout>
+</Page>

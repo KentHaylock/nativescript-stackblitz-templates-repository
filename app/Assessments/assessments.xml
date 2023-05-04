@@ -1,0 +1,24 @@
+<Page loaded="onLoaded">
+  <ActionBar title="Assessment Info"/>
+  <ScrollView scroll="onScroll">
+    <StackLayout id="parentLayout">
+      <Label text="{{ title, 'Assessment Name: ' + title }}"/>
+      <TextField text="{{ title }}" />
+      <Label text="Assessment Type:" />
+      <ListPicker items="{{ majors }}" selectedIndex="{{ major }}" />
+      <Label text="Date Assigned:" />
+      <DatePicker date="{{ dateAssigned }}" />
+      <Label text="Date Due:" />
+      <DatePicker date="{{ dateDue }}" />
+      <Label text="" />
+      <Label text="Enter Max points Acquirable:" />
+      <TextField text="{{ maxPoints }}" />
+      <Label text="" />
+      <Label text="Score for student:" />
+      <TextField text="{{ score }}" />
+      <Label text="" />
+      <Button tap="onTap" text="Done"/>
+      <Button tap="onDelete" text="Delete Assessment"/>
+    </StackLayout>
+  </ScrollView>
+</Page>
